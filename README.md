@@ -1,7 +1,7 @@
 # PEM
 
 ### How to build and use PEM
-#### 1. Data Preparation
+### 1. Data Preparation
 1.1. Specify the holding period. The following steps assume that we use a holding period of 2 months.
 
 1.2. Calculate future holding period returns at the month end of every two months. For example, if the available market data starts at Jan 2009, then we calculate the first holding period return for a stock between Feb 2009 and Mar 2009, and assign this return to the last trading day of Jan 2009 of that stock as if at that date we know the prices for the subsequent two months. For the same stock, the next holding period return is the return between Apr and May and is assigned to the last trading day of Mar.
@@ -10,7 +10,7 @@
 
 1.4. Combine the features (factors) data with labels. In our example, the features at the last trading day of Jan 2009 are the latest available financial/analyst/distribution variables upon that date.
 
-#### 2. Train models in a walk-forward manner
+### 2. Train models in a walk-forward manner
 2.1 Specify the training window, namely how many periods of cross-sectional data created in Step 1 are used to train predictive models. We assume henceforth a training window of 18, which means the trainig data spans 3 years (2 months x 18).
 
 2.2 Train neural networks starting from the first month end when 18 periods of cross-sectional data are available. Save the trained model. Move forward for one month and repeat the process. The architecture of neural networks are to be determined. Training-validating are used to measure the predictability as well as for hyperparameter-tuning
