@@ -3,9 +3,10 @@ Run time_align.py program, output file will be stored in output folder
 
 ## output folder
 1. market_data_183.csv:<br/> contains 183 stocks that have both s&p rating and ratios / dividend records.<br/>
-columns and explaination:
+columns and explaination:<br/>
+
 |       column name       |                                  interpretation                                  |
-| --- | --- |
+|:-----------------------:|:--------------------------------------------------------------------------------:|
 |          gvkey          |                              unique stock identifier                             |
 |           date          | the date new information of the stock arrive (e.g. s&p rating, dividend, ratios) |
 |        ms_rating        |                                                                                  |
